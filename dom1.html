@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="childEle">Sunday</div>
+        <div class="childEle">Monday</div>
+        <div class="childEle">Tuesday</div>
+        <div class="childEle">Wednesday</div>
+    </div>
+    <script>
+        let ch=document.querySelector(".childEle")
+        console.log(ch.parentElement);
+        console.log(ch.lastElementChild);
+        console.log(ch);
+        let div = document.createElement("div")
+        console.log(div);
+        let text = "hello pratima"
+        div.style.color="red"
+        // console.log(text);
+        div.append(text)
+        document.body.appendChild(div)
+ 
+    </script>
+</body>
+
+</html>

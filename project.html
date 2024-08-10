@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent button:nth-child(1) {
+        background-color: red;
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+    }
+
+    .parent button:nth-child(2) {
+        background-color: yellow;
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+    }
+
+    .parent button:nth-child(3) {
+        background-color: pink;
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <button class="button" id="red">Red</button>
+        <button class="button" id="yellow">yellow</button>
+        <button class="button" id="pink">Pink</button>
+    </div>
+    <script>
+        let body = document.querySelector("body")
+        let buttons = document.querySelectorAll(".button");
+        // console.log(buttons);
+        buttons.forEach((btn) => {
+            btn.addEventListener("click", (e) => {
+                console.log(e.target.id);
+                if (e.target.id === "red") {
+                    body.style.backgroundColor =e.target.id
+                }
+                if (e.target.id === "yellow") {
+                    body.style.backgroundColor =e.target.id
+                }
+                if (e.target.id === "pink") {
+                    body.style.backgroundColor =e.target.id
+                }
+              
+            })
+        })
+    </script>
+</body>
+
+</html>

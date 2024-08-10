@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="setName">hello pratima</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+    <script>
+        let clearInt = setInterval(() => {
+            let a = Date()
+            console.log(`pratima ${a}`);
+        }, 2000);
+        let start = document.getElementById("start");
+        start.addEventListener("click", () => {
+            clearInterval(clearInt)
+
+        })
+
+        let clearThis = setTimeout(() => {
+            document.getElementById("setName").innerHTML = "hello simmi"
+        }, 3000);
+        let button = document.getElementById("stop")
+        button.addEventListener("click", () => {
+            clearTimeout(clearThis);
+            console.log("stopped");
+        })
+    </script>
+</body>
+
+</html>
